@@ -6,6 +6,7 @@ module.exports = {
       fontFamily:{
         'jetbrains-mono': ['JetBrains Mono', 'monospace'],
         'love-light':['love-light', 'cursive'],
+        'londrina-solid':['londrina-solid,sans-serif']
       },
     },
   },
