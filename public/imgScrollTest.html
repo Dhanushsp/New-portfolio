@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>image scroll</title>
+    <link rel="stylesheet" href="output.css">
+
+    <style>
+        @keyframes scrollImageUp {
+          from {
+            transform: translateY(0);
+            
+          }
+          to {
+            transform: translateY(calc(100% - 100px));
+          }
+        }
+        
+        #scrolling-image {
+          animation: scrollImageUp 10s linear infinite;
+        }
+        </style>
+</head>
+<body>
+    <div class="relative overflow-hidden h-64 w-full">
+        <img id="scrolling-image" src="your-image.jpg" alt="Scrolling Image" class="absolute bottom-0 left-0 w-full">
+    </div>
+</body>
+</html>

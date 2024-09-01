@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <link rel="stylesheet" href="output.css">
+</head>
+<body>
+    <div class="navbar">
+        <!-- Your Navbar content -->
+        <img src="" alt="">
+        <p>need a website?</p>
+    </div>
+    
+    <div class="flex">
+        <div class="w-1/4 p-4">
+            <ul id="project-list">
+                <li><a href="#" onclick="showProject('project1')">Project 1</a></li>
+                <li><a href="#" onclick="showProject('project2')">Project 2</a></li>
+                <!-- Add more projects as needed -->
+            </ul>
+        </div>
+    
+        <div class="w-3/4 p-4">
+            <!-- Hero Section -->
+            <div id="hero-section">
+                <!-- Your hero content -->
+                 <p>hero sec</p>
+            </div>
+    
+            <!-- Project Sections -->
+            <div id="project1" class="hidden">
+                <!-- Content for Project 1 -->
+                 <p>this is project 1</p>
+            </div>
+    
+            <div id="project2" class="hidden">
+                <!-- Content for Project 2 -->
+                 <p>trhis is project 2</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showProject(projectId) {
+    // Hide all project sections and the hero section
+    document.querySelectorAll('#project1, #project2').forEach(function(section) {
+        section.classList.add('hidden');
+    });
+    document.getElementById('hero-section').classList.add('hidden');
+
+    // Show the selected project section
+    document.getElementById(projectId).classList.remove('hidden');
+}
+
+    </script>
+</body>
+</html>
