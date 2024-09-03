@@ -1,30 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>image scroll</title>
-    <link rel="stylesheet" href="output.css">
-
-    <style>
-        @keyframes scrollImageUp {
-          from {
-            transform: translateY(0);
-            
-          }
-          to {
-            transform: translateY(calc(100% - 100px));
-          }
-        }
-        
-        #scrolling-image {
-          animation: scrollImageUp 10s linear infinite;
-        }
-        </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>script test</title>
 </head>
 <body>
-    <div class="relative overflow-hidden h-64 w-full">
-        <img id="scrolling-image" src="your-image.jpg" alt="Scrolling Image" class="absolute bottom-0 left-0 w-full">
-    </div>
+  <button onclick="showProject('hero')">hero</button>
+  <button onclick="showProject('about')">about</button>
+  <button onclick="showProject('need-a-website')">need</button>
+  <button onclick="showProject('project')">project</button>
+  <!-- Hero Section -->
+<div id="hero">
+  <!-- Content here -->hero
+</div>
+
+<!-- About Section -->
+<div id="about" style="display: none;">
+  <!-- Content here -->about
+</div>
+
+<!-- Need a Website Section -->
+<div id="need-a-website" style="display: none;">
+  <!-- Content here -->need website
+</div>
+
+<!-- Need a Website Section -->
+<div id="project" style="display: none;">
+  <!-- Content here -->project
+</div>
+
+
 </body>
+
+<script>
+  function showProject(projectId) {
+    // Hide all sections first
+    document.getElementById('hero-section').style.display = 'none';
+    document.getElementById('about').style.display = 'none';
+    document.getElementById('need-a-website').style.display = 'none';
+    document.getElementById('project1').style.display = 'none';
+
+    // Show the selected section
+    if (projectId === 'hero-section') {
+        document.getElementById('hero-section').style.display = 'block';
+    } else if (projectId === 'about') {
+        document.getElementById('about').style.display = 'block';
+    } else if (projectId === 'need-a-website') {
+        document.getElementById('need-a-website').style.display = 'block';
+    }else if (projectId === 'project1') {
+        document.getElementById('project1').style.display = 'block';
+    }
+}
+
+</script>
 </html>
