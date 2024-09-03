@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dhanush</title>
+    <title>Test</title>
     <link rel="stylesheet" href="output.css">
 
     <!-- google fonts -->
@@ -44,15 +44,18 @@
         font-weight: 500;
         font-style: normal;" class="text-xl cursor-pointer"
             onclick="showProject('need-a-website')">Need a website?</p>
+        <p class="m-5 cursor-pointer" onclick="showProject('hero-section')">Home</p>
     </div>
 
 
 
     <div class="flex justify-around mx-32 items-center h-screen">
         <!-- projects list -->
+        
+
         <div id="projects"
             class="h-4/5  w-auto pt-5 pb-5 pl-10 pr-10  bg-gray-200 text-center rounded-md font-jetbrains-mono  text-sm list-none">
-            <li class="m-5 cursor-pointer" onclick="showProject('hero-section')">Home</li>
+            
             <li class="m-5 cursor-pointer" onclick="showProject('project1')">Project 1</li>
             <li class="m-5 cursor-pointer" onclick="showProject('project2')">Project 2</li>
             <li class="m-5 cursor-pointer" onclick="showProject('project3')">Project 3</li>
@@ -344,44 +347,33 @@
                 <!-- initially hidden Pricing page -->
 
                 <div id="need-a-website" class="hidden">
-                    <h1 style="font-family: Londrina Solid, sans-serif; font-weight: 500; font-style: normal;"
-                        class="text-center mb-20 text-4xl m-5">Pick Yours</h1>
-
+                    <h1 style="font-family: Londrina Solid, sans-serif; font-weight: 500; font-style: normal;" class="text-center mb-20 text-4xl m-5">Pick Yours</h1>
+                
                     <div class="flex justify-around gap-10">
-                        <div>
-                            <p style="font-family: Love Light, cursive; font-weight: 400; font-style: normal;"
-                                class="text-6xl mb-6 text-gray-600 text-center">Starter</p>
+                        <div >
+                            <p style="font-family: Love Light, cursive; font-weight: 400; font-style: normal;" class="text-6xl mb-6 text-gray-600 text-center">Starter</p>
                             <div class="h-64 w-64 bg-gray-400 rounded-2xl"></div>
-                            <p class="text-center text-4xl"
-                                style="font-family: Londrina Solid, sans-serif; font-weight: 500; font-style: normal;">
-                                $50</p>
+                            <p class="text-center text-4xl" style="font-family: Londrina Solid, sans-serif; font-weight: 500; font-style: normal;">$50</p>
                         </div>
-
+                
                         <div>
-                            <p style="font-family: Love Light, cursive; font-weight: 400; font-style: normal;"
-                                class="text-6xl mb-6 text-gray-600 text-center">Starter</p>
+                            <p style="font-family: Love Light, cursive; font-weight: 400; font-style: normal;" class="text-6xl mb-6 text-gray-600 text-center">Starter</p>
                             <div class="h-64 w-64 bg-gray-400 rounded-2xl"></div>
-                            <p class="text-center text-4xl"
-                                style="font-family: Londrina Solid, sans-serif; font-weight: 500; font-style: normal;">
-                                $50</p>
+                            <p class="text-center text-4xl" style="font-family: Londrina Solid, sans-serif; font-weight: 500; font-style: normal;">$50</p>
                         </div>
-
+                
                         <div>
-                            <p style="font-family: Love Light, cursive; font-weight: 400; font-style: normal;"
-                                class="text-6xl mb-6 text-gray-600 text-center">Starter</p>
+                            <p style="font-family: Love Light, cursive; font-weight: 400; font-style: normal;" class="text-6xl mb-6 text-gray-600 text-center">Starter</p>
                             <div class="h-64 w-64 bg-gray-400 rounded-2xl"></div>
-                            <p class="text-center text-4xl"
-                                style="font-family: Londrina Solid, sans-serif; font-weight: 500; font-style: normal;">
-                                $50</p>
+                            <p class="text-center text-4xl" style="font-family: Londrina Solid, sans-serif; font-weight: 500; font-style: normal;">$50</p>
                         </div>
                     </div>
-
+                
                     <div class="text-center">
-                        <button class="px-10 py-3 m-7 bg-gray-900 rounded-lg font-jetbrains-mono text-gray-300">Get
-                            Yours</button>
+                        <button class="px-10 py-3 m-7 bg-gray-900 rounded-lg font-jetbrains-mono text-gray-300">Get Yours</button>
                     </div>
                 </div>
-
+                
 
             </div>
 
@@ -390,7 +382,7 @@
 
     </div>
 
-
+    <!-- creating About page -->
 
 
 
@@ -400,18 +392,27 @@
 
     <script>
         function showProject(projectId) {
-            // Hide all project sections and the hero section
-            document.querySelectorAll('#project1, #project2, #hero-section, #about ,#need-a-website').forEach(function (section) {
-                section.classList.add('hidden');
-
-            });
-
-            if(projectId == 'need-a-website')
-            document.getElementById(projectId).classList.remove('hidden');
-        }
-
-    </script>
+          // Hide all sections first
+          document.getElementById('hero-section').style.display = 'none';
+          document.getElementById('about').style.display = 'none';
+          document.getElementById('need-a-website').style.display = 'none';
+          document.getElementById('project1').style.display = 'none';
+      
+          // Show the selected section
+          if (projectId === 'hero-section') {
+              document.getElementById('hero-section').style.display = 'block';
+          } else if (projectId === 'about') {
+              document.getElementById('about').style.display = 'block';
+          } else if (projectId === 'need-a-website') {
+              document.getElementById('need-a-website').style.display = 'block';
+          }else if (projectId === 'project1') {
+              document.getElementById('project1').style.display = 'block';
+          }
+      }
+      
+      </script>
 
 </body>
 
 </html>
+
