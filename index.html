@@ -43,11 +43,11 @@
 
   <!--Right Menu -->
   <div class=" absolute top-1 right-1 md:top-5-right-5 flex flex-col items-center">
-    <img class="w-10 h-auto  md:w-20 border border-gray-300 rounded-full pr-1  bg-gray-100" src="mypic.png" alt=""
+    <img class="w-10 h-auto  lg:w-20 border border-gray-300 rounded-full pr-1  bg-gray-100" src="mypic.png" alt=""
       onclick="showProject('about')">
     <p style=" font-family: Londrina Solid, sans-serif;
         font-weight: 500;
-        font-style: normal;" class="text-lg md:text-xl cursor-pointer" onclick="showProject('need-a-website')"><span class="hidden md:block">Need a website?</span> <span class="block md:hidden">Webify?</span></p>
+        font-style: normal;" class="text-lg md:text-xl cursor-pointer" onclick="showProject('need-a-website')"><span class="hidden lg:block">Need a website?</span> <span class="block lg:hidden">Webify?</span></p>
   </div>
 
   <!-- left menu -->
@@ -74,11 +74,11 @@
 
   
   <!-- container -->
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 mx-auto items-center h-screen ">
+  <div class="grid grid-cols-1 md:grid-cols-2 p-4 md items-center h-screen ">
 
     <!-- left container -->
     <div id="projects"
-      class="hidden md:block p-4 w-2/5 m-auto h-4/5 bg-gray-200 text-center rounded-lg font-jetbrains-mono  text-sm list-none overflow-hidden">
+      class="hidden md:block p-4 w-52 lg:w-2/5 m-auto h-4/5 bg-gray-200 text-center rounded-lg font-jetbrains-mono  text-sm list-none overflow-hidden">
       
       <p class=" text-xl text-gray-400">Projects</p>
       <br>
@@ -88,13 +88,13 @@
     <!-- flex flex-col p-4 w-3/5 mx-auto -->
 
     <!-- right container -->
-    <div class="flex flex-col p-4 w-5/6 md:w-3/5 mx-auto">
+    <div class="flex flex-col p-4 my-5 md:ml-10 w-5/6 md:w-3/5 mx-auto">
 
       <!-- hero sec -->
       <div id="hero-section" class="text-center ">
 
         <!-- skills icons -->
-        <div class="flex gap-5 justify-center items-center mb-5 opacity-50 z-10">
+        <div class="flex gap-2 lg:gap-5 justify-center items-center mb-5 my-5 opacity-50 z-10">
           <?xml version="1.0" ?>
           <!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.0//EN' 'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
           <svg class="w-15 h-15" enable-background="new 0 0 32 32" height="32px" id="Layer_1" version="1.0"
@@ -238,15 +238,15 @@
         <div class="text-center space-y-2">
           <h1 style="font-family: Love Light, cursive;
                 font-weight: 400;
-                font-style: normal;" class="font-bold text-5xl md:text-6xl text-gray-800">Dhanush</h1>
-          <h3 class=" text-xl md:text-2xl font-jetbrains-mono text-gray-600">Freelance WebDeveloper</h3>
-          <p class="font-light font-jetbrains-mono text-xs md:text-sm text-gray-500">"Crafting custom e-commerce and
+                font-style: normal;" class="font-bold text-5xl lg:text-6xl text-gray-800">Dhanush</h1>
+          <h3 class=" text-xl lg:text-2xl font-jetbrains-mono text-gray-600">Freelance WebDeveloper</h3>
+          <p class="font-light font-jetbrains-mono text-xs lg:text-sm text-gray-500">"Crafting custom e-commerce and
             portfolio websites with expertise in modern <span class="text-red-700 font-semibold"> web
               technologies."</span></p>
         </div>
 
         <!-- social links -->
-        <div class="flex justify-center mt-2 gap-3 z-10 opacity-50">
+        <div class="flex justify-center mt-5 gap-3 z-10 opacity-50">
           <a href="https://www.linkedin.com/in/dhanushsp982/" target="_blank">
             <?xml version="1.0" ?>
             <!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg
@@ -297,20 +297,20 @@
       </div>
 
       <!-- initially hidden About page -->
-      <div id="about" class="m-10 hidden">
+      <div id="about" class="my-5 hidden">
         <div class="flex flex-col items-center">
 
 
-          <!-- skills icons -->
-          <img class="w-28 h-auto border border-gray-300 rounded-full pr-1  bg-gray-100 mb-5" src="mypic.png" alt="">
+          <!-- my icons -->
+          <img class="w-20 lg:w-28 h-auto border border-gray-300 rounded-full pr-1  bg-gray-100 mb-5" src="mypic.png" alt="">
 
           <!-- Title -->
           <div class="text-center space-y-2">
             <h1 style="font-family: Love Light, cursive;
                     font-weight: 400;
-                    font-style: normal;" class="font-bold text-6xl ">About</h1>
-            <h3 class=" text-2xl font-jetbrains-mono">Freelance WebDeveloper</h3>
-            <p class="font-light font-jetbrains-mono text-sm text-gray-500">
+                    font-style: normal;" class="font-bold text-5xl lg:text-6xl ">About</h1>
+            <h3 class=" text-xl lg:text-2xl font-jetbrains-mono text-gray-600">Freelance WebDeveloper</h3>
+            <p class="font-light font-jetbrains-mono text-xs lg:text-sm text-gray-500">
               "As a freelancer, I specialize in <span class="text-red-700 font-semibold">custom e-commerce
                 websites</span> and
               <span class="text-red-700 font-semibold">portfolio websites</span>. With expertise in Figma, HTML, CSS,
@@ -321,7 +321,7 @@
           </div>
 
           <!-- social links -->
-          <div class="flex justify-center mt-2 gap-3 opacity-90">
+          <div class="flex justify-center mt-5 gap-3 opacity-90">
             <a href="https://www.linkedin.com/in/dhanushsp982/" target="_blank">
               <?xml version="1.0" ?>
               <!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
