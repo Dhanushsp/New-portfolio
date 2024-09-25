@@ -69,6 +69,7 @@
     <p class=" text-xl text-gray-400 relative right-1">Projects</p>
     <br>
     <li class="m-5 cursor-pointer" onclick="showProject('project1')">E-commerce site</li>
+    <li class="m-5 cursor-pointer" onclick="showProject('project2')">Wajdan-Farooq-Chemicals</li>
 
   </div>
 
@@ -83,6 +84,7 @@
       <p class=" text-xl text-gray-400">Projects</p>
       <br>
       <li class="m-5 cursor-pointer" onclick="showProject('project1')">E-commerce site</li>
+      <li class="m-5 cursor-pointer" onclick="showProject('project2')">Wajdan-Farooq-Chemicals</li>
     </div>
 
     <!-- flex flex-col p-4 w-3/5 mx-auto -->
@@ -296,6 +298,11 @@
             class="rounded-lg" src="dorga e-commerce.png" alt=""></a>
       </div>
 
+      <div id="project2" class="hidden rounded-lg h-4/5 mx-auto overflow-hidden">
+        <a href="https://dhanushsp.github.io/Wajdan-Farooq-Chemicals/" target="_blank"><img id="scrolling-image"
+            class="rounded-lg h-4/5" src="Wajdan-Farooq-Chemicals.png" alt=""></a>
+      </div>
+
       <!-- initially hidden About page -->
       <div id="about" class="my-5 hidden">
         <div class="flex flex-col items-center">
@@ -434,6 +441,7 @@
       document.getElementById('about').style.display = 'none';
       document.getElementById('need-a-website').style.display = 'none';
       document.getElementById('project1').style.display = 'none';
+      document.getElementById('project2').style.display = 'none';
 
       // Show the selected section
       if (projectId === 'hero-section') {
@@ -444,6 +452,8 @@
         document.getElementById('need-a-website').style.display = 'block';
       } else if (projectId === 'project1') {
         document.getElementById('project1').style.display = 'block';
+      } else if (projectId === 'project2') {
+        document.getElementById('project2').style.display = 'block';
       }
     }
 
